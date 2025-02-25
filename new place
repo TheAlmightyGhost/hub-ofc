@@ -479,6 +479,10 @@ Sound:Play()
 game:GetService("StarterGui"):SetCore("SendNotification",{["Title"] = "Invisible Toggle Loaded",["Text"] = "Press "..Keybind.." to become change visibility.",["Duration"] = 20,["Button1"] = "Okay."})
         end)
 
+createSettingsButton(settingsTabFrame, "Chat bypass", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
+        end)
+
     local settingsTabFrame = createTab("Goofy scripts unfinished")
 
     local function createSettingsButton(parent, text, onClick)
