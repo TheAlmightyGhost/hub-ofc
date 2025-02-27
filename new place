@@ -101,7 +101,7 @@ local function createGUI()
 
     createToggleButton(grappleTabFrame, "Toggle Damage Size", function(isEnabled)
     if isEnabled then
-        game.Workspace.Pit.Damage.Size = Vector3.new(200000000000000000, 200000000000000000000, 200000000000000000000)
+        game.Workspace.Pit.Damage.Size = Vector3.new(2000000000000, 2000000000000000, 200000000000000)
     else
         game.Workspace.Pit.Damage.Size = Vector3.new(0, 0, 0)
       end
@@ -299,6 +299,10 @@ end)
     -- New Tab: Settings
     local settingsTabFrame = createTab("Admin n shit")
 
+    local yOffset = 50
+    local buttonHeight = 30
+    local buttonSpacing = 5
+
     local function createSettingsButton(parent, text, onClick)
         local button = Instance.new("TextButton")
         button.Text = text
@@ -479,11 +483,11 @@ Sound:Play()
 game:GetService("StarterGui"):SetCore("SendNotification",{["Title"] = "Invisible Toggle Loaded",["Text"] = "Press "..Keybind.." to become change visibility.",["Duration"] = 20,["Button1"] = "Okay."})
         end)
 
-createSettingsButton(settingsTabFrame, "Chat bypass", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
-        end)
-
     local settingsTabFrame = createTab("Goofy scripts unfinished")
+
+    local yOffset = 50
+    local buttonHeight = 30
+    local buttonSpacing = 5
 
     local function createSettingsButton(parent, text, onClick)
         local button = Instance.new("TextButton")
