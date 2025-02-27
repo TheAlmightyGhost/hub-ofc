@@ -483,6 +483,18 @@ Sound:Play()
 game:GetService("StarterGui"):SetCore("SendNotification",{["Title"] = "Invisible Toggle Loaded",["Text"] = "Press "..Keybind.." to become change visibility.",["Duration"] = 20,["Button1"] = "Okay."})
         end)
 
+        createSettingsButton(settingsTabFrame, "bypass chat", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
+          end)
+
+        createSettingsButton(settingsTabFrame, "bypass 2", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/twig76/ayra/refs/heads/main/ayras",true))() 
+        end)
+
+        createSettingsButton(settingsTabFrame, "bypass 3", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/publicproduct.lua", true))()
+        end)
+
     local settingsTabFrame = createTab("Goofy scripts unfinished")
 
     local yOffset = 50
